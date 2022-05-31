@@ -52,3 +52,13 @@ public class arrays {
 	}
 
 }
+
+/*
+input: Example in the code 
+2D : 	| 1 2 3 |
+	| 4 5 6	|
+	| 7 8 9 |
+	
+output: 1 2 3 6 5 4 7 8 9 **Note: In the Code each one is printed on a new line.
+
+*/
