@@ -1,0 +1,80 @@
+// Model–view–controller (MVC) is a software design pattern commonly used for developing user interfaces that divide the related program logic into three interconnected elements.
+// This is done to separate internal representations of information from the ways information is presented to and accepted from the user.
+
+// This 3 classes represent the MVC desgin pattern coding example :
+
+//Model (Class or the entity)
+public class Student {
+	
+	private String name;
+	private String ID;
+	
+	public Student() {
+		name ="Hanna";
+		ID = "1190336";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		ID = iD;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", ID=" + ID + "]";
+	}	
+}
+
+//Contrller that contols the data flow for model and view.
+public class StudentController {
+   private Student model;
+   private StudentView view;
+
+   public StudentController(Student model, StudentView view){
+      this.model = model;
+      this.view = view;
+   }
+
+   public void setStudentName(String name){
+      model.setName(name);		
+   }
+
+   public String getStudentName(){
+      return model.getName();		
+   }
+
+   public void setStudentID(String rollNo){
+      model.setID(rollNo);		
+   }
+
+   public String getStudentID(){
+      return model.getID();		
+   }
+
+   public void updateView(){				
+      view.printStudentDetails(model.getName(), model.getID());
+   }	
+}
+
+//View ( Representation of the model) **Note: In real world this is ususally a javafx or swing codes.
+public class StudentView {
+
+	public void printStudentDetails(String studentName, String studentID){
+	      System.out.println("Student: ");
+	      System.out.println("Name: " + studentName);
+	      System.out.println("Roll No: " + studentID);
+	   }
+}
+
+
