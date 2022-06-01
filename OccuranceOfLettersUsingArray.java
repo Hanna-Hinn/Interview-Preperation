@@ -1,5 +1,5 @@
 //How to calculate the occurance of characters using array (a-z) without the Captial letters
-public class Main {
+public class OccuranceOFLettersUsingArray {
 
 	public static void main(String[] args) {
     
