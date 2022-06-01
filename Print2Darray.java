@@ -1,4 +1,5 @@
 //This Prints u a 2D array from left to right in the first row and then from right to left and so on.
+//In a snake shape
 public class arrays {
 
 	//
